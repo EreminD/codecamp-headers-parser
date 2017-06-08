@@ -4,7 +4,7 @@
   "description": "Service for getting simple info about request",
   "main": "header-parser.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node header-parser.js"
   },
   "author": "Dmitry Eremin",
   "license": "ISC",
