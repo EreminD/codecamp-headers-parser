@@ -2,13 +2,14 @@ const config = require('config')
 const express = require('express')
 const app = express()
 
-//{"ipaddress":"165.225.66.54","language":"en-US","software":"Windows NT 10.0; Win64; x64"}
 app.get('/', function(req, res){
-    res.send({
-        "ipaddress" : req.ip,
-        "language": req.get('Accept-Language'),
-        "software": req.get('User-Agent')
-    }); 
+    var requestInfo = {
+        "ipaddress" : req.ip.split(":").pop(),
+        "language": req.get('Accept-Language').split(",")[0],
+        "software": req.get('User-Agent').split("(")[1].split(")")[0]
+    };
+    console.log('Got request: ' + JSON.stringify(requestInfo));
+    res.send(requestInfo); 
 }) 
 
 app.listen(config.port, function () {

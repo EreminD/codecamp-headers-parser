@@ -1,12 +1,12 @@
 {
   "name": "header-parser",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Service for getting simple info about request",
+  "main": "header-parser.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Dmitry Eremin",
   "license": "ISC",
   "dependencies": {
     "config": "^1.26.1",
